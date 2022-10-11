@@ -112,8 +112,9 @@ function App() {
     });
   };
 
-  const uniqueData = [...new Set(csv)];
 
+
+  const uniqueData = [...new Set(csv)];
   //PAGINATION FUNCTION
   const displayCsv = searched(uniqueData)
     .slice(pagesVisited, pagesVisited + usersPerPage)
@@ -133,6 +134,7 @@ function App() {
         </Tbody>
       );
     });
+
 
   const displayAggregatedData = aggregatedData
     .slice(pagesVisited, pagesVisited + usersPerPage)
